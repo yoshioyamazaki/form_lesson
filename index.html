@@ -11,5 +11,125 @@
   </head>
   <body>
 
+    <section class="wrapper">
+      <div class="inner">
+        <main class="main__content">
+
+          <h1 class="top__title">アカウント作成</h1>
+
+          <div class="jamp__button">
+            <div class="jamp facebook">
+              <a class="button facebook__text" href="">Facebookでスタート</a>
+            </div>
+            <div class="jamp google">
+              <a class="button google__text" href="">Googleでスタート</a>
+            </div>
+          </div>
+          <p class="jump__text">タイムラインへ投稿を行うことや、アカウント情報を伝えることはありません。</p>
+
+          <p class="info__text">アカウント情報</p>
+
+          <form action="index.html" method="POST">
+            
+            <!--名前-->
+            <div class="box name__input">
+              <div class="name last">
+                <p class="name__size error">名字</p>
+                <input type="text" class="lastname input__column" required>
+              </div>
+              <div class="name first">
+                <p class="name__size error">名前</p>
+                <input type="text" class="firstname input__column" required>
+              </div>
+            </div>
+
+            <!--姓別-->
+            <div class="box gender__input">
+              <p class="name__size">性別</p>
+              <div class="gender__content">
+                <label class="gender__column">
+                  <input type="radio" name="gender" value="男性">
+                  <span class="radio__span">男性</span>
+                </label>
+                <label class="gender__column">
+                  <input type="radio" name="gender" value="女性">
+                  <span class="radio__span">女性</span>
+                </label>
+                <label class="gender__column">
+                  <input type="radio" name="gender" value="その他">
+                  <span class="radio__span">その他</span>
+                </label>
+              </div>
+            </div>
+
+            <!--出身-->
+            <div class="box origin__input">
+              <p class="name__size">出身</p>
+              <select nmae="origin" class="origin input__column">
+                <option value="tokyo" selected>東京</option>
+                <option value="tiba">千葉</option>
+                <option value="saitama">埼玉</option>
+                <option value="kanagawa">神奈川</option>
+              </select>
+            </div>
+
+            <!--Eメール-->
+            <div class="box mail__input">
+              <p class="name__size error">Eメール</p>
+              <input type="email" placeholder="ex)hoge@ezample.com" class="email input__column" required>
+            </div>
+
+            <!--電話番号-->
+            <div class="box phonenamber__input">
+              <p class="name__size">電話番号</p>
+              <input type="tel" placeholder="ex)09012345678" class="tel input__column">
+            </div>
+
+            <!--パスワード-->
+            <div class="box password__input">
+              <p class="name__size error">パスワード</p>
+              <input type="password" class="pass input__column" required>
+            </div>
+
+            <!--確認用-->
+            <div class="box password__input">
+              <p class="name__size error">パスワード(確認用)</p>
+              <input type="password" class="pass input__column" required>
+            </div>
+
+            <!--希望コース-->
+            <div class="box couse__input">
+              <p class="name__size">希望コース</p>
+              <div class="couse__content">
+                <labeL class="couse__check"><input type="checkbox" name="couse" value=""><span class="cause__span">フロントエンド</span></labeL>
+                <labeL class="couse__check"><input type="checkbox" name="couse" value=""><span class="cause__span">バックエンド</span></labeL>
+                <labeL class="couse__check"><input type="checkbox" name="couse" value=""><span class="cause__span">アプリ</span></labeL>          
+              </div>
+            </div>
+
+            <!--備考-->
+            <div class="box remarks__input">
+              <p class="name__size">備考</p>
+              <textarea name="ramarks" class="ramarks input__column" placeholder="何かあれば記入して下さい"></textarea>
+            </div>
+
+            <!--アカウント作成-->
+            <div class="box accont__input">
+              <input type="submit" value="アカウント作成" class="accont input__column">
+            </div>
+
+            <!--プライバシーポリシー-->
+            <p class="box agree__text">アカウントを作成することにより、<a class="linkto" href="">利用規約</a>と<a class="linkto" href="">プライバシーポリシー</a>に同意するものとします。</p>
+
+          </form>
+        </main>
+
+        <footer class="login__area">
+          <p class="login__text">すでにアカウントをお持ちですか？<a class="linkto" href="">ログイン</a></p>
+          <p class="login__text"><a class="linkto" href="">認証メールが届きませんか？</a></p>
+        </footer>
+
+      </div>
+    </section>
   </body>
 </html>

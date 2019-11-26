@@ -1,1 +1,311 @@
 @charset "utf-8";
+
+
+/*共通*/
+
+.box {
+  margin-top: 15px;
+}
+
+.box:first-child {
+  margin-top: 0;
+}
+
+.name__size {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.input__column {
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  font-size: 15px;
+  height: 35px;
+  padding: 5px;
+  width: 100%;
+}
+
+.input__column:focus {
+  background-color: #fff;
+  outline: 2px;
+  box-shadow: 0px 0px 0px 1px #01bfbd;
+}
+
+textarea {
+  resize: none;
+}
+
+.error:after {
+  content: "※";
+  color: #dd4b39;
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+/**/
+.wrapper {
+  background-color:#f2f6f7;
+  padding: 30px 0;
+  width: 100%;
+}
+
+.inner {
+  margin: 0 auto;
+  width: 640px;
+}
+
+.main__content {
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 48px 64px;
+}
+
+.top__title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.jamp__button {
+  display: flex;
+}
+
+.jamp {
+  font-size: 13px;
+  text-align: center;
+  padding: 13px;
+  width: 50%;
+}
+
+.facebook {
+  background-color:#3b5999;
+  border-radius: 3px;
+}
+
+.facebook__text {
+  color: #fff;
+}
+
+.facebook:hover {
+  background-color:#22448b;
+  transition: background-color 0.3s;
+}
+
+.google {
+  background-color:#fff;
+  border-radius: 3px;
+  border: 1px solid #d9d9d9;
+  margin-left: 10px;
+}
+
+.google__text {
+  color: #dd4b39;
+}
+
+.google:hover {
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+}
+
+.jump__text {
+  color: #ccc;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.info__text {
+  display: flex;
+  align-items: center;
+  color: #ccc;
+  font-size: 12px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.info__text:before {
+  content: "";
+  flex-grow: 1;
+  border-top: 1px #ccc solid;
+  margin-right: 10px;
+}
+
+.info__text:after {
+  content: "";
+  flex-grow: 1;
+  border-top: 1px #ccc solid;
+  margin-left: 10px;
+} 
+
+.name__input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.last {
+  margin-right: 10px;
+}
+
+.name {
+  width: 50%;
+}
+
+/*性別*/
+
+.gender__column {
+  margin-right: 10px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.radio__span {
+  padding-left: 20px;
+  position:relative;
+}
+
+input[type="radio"] + .radio__span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked + .radio__span::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 7px;
+  height: 7px;
+  background-color: #01bfbd;
+  border-radius: 50%;
+}
+
+/*出身*/
+
+.origin__input {
+  width: 50%;
+  position: relative;
+}
+
+.origin {
+  -webkit-appearance: none;
+	appearance: none;
+}
+
+.origin__input:after {
+  content: '';
+  position: absolute;
+  right: 15px;
+  top: 60%;
+  transform: rotate(45deg);
+  height: 5px;
+  width: 5px;
+  border-right: 3px solid #ccc;
+  border-bottom: 3px solid #ccc;
+}
+
+.origin:focus {
+  background-color: #f9f9f9;
+  border-color: #d9d9d9;
+  box-shadow: none;
+}
+
+/*希望コース*/
+
+/*チェックボックス一度消す*/
+input[type="checkbox"] {
+  display: block;
+  position: relative;
+  opacity:0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.cause__span{
+  padding-left: 20px;
+  position:relative;
+}
+
+/*チェックボックス*/
+.cause__span::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #ccc;
+}
+
+/*チェックマーク*/
+input[type="checkbox"]:checked + .cause__span::after{
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  width: 7px;
+  height: 14px;
+  transform: rotate(40deg);
+  border-bottom: 3px solid #01bfbd;
+  border-right: 3px solid #01bfbd;
+}
+
+/*備考*/
+.ramarks {
+  height:  100px;
+}
+
+/*アカウント作成*/
+
+.accont {
+  background-color:#01bfbd;
+  color: #fff;
+  height: 50px;
+}
+
+.accont:hover {
+  background-color: #01a9bf;
+  transition: background-color 0.3s;
+}
+
+.accont:active {
+  background-color: #fff;
+  border-color: #ccc;
+  color: #01bfbd;
+  box-shadow: none;
+}
+
+/*プライバシーポリシー*/
+
+.agree__text {
+  font-size: 12px;
+}
+
+/*フッター*/
+
+.login__area {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login__text {
+  font-size: 13px;
+  margin-top: 7px;
+}
+
+.linkto {
+  color: #01bfbd;
+}
+
+.linkto:hover {
+  color: #39dddd;
+}
