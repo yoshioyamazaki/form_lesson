@@ -60,6 +60,8 @@ textarea {
   box-sizing: border-box;
   background-color: #fff;
   padding: 48px 64px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgb(197, 195, 195);
 }
 
 .top__title {
@@ -73,15 +75,16 @@ textarea {
 }
 
 .jamp {
+  border-radius: 3px;
   font-size: 13px;
   text-align: center;
   padding: 13px;
   width: 50%;
+  cursor: pointer;
 }
 
 .facebook {
   background-color:#3b5999;
-  border-radius: 3px;
 }
 
 .facebook__text {
@@ -95,7 +98,6 @@ textarea {
 
 .google {
   background-color:#fff;
-  border-radius: 3px;
   border: 1px solid #d9d9d9;
   margin-left: 10px;
 }
@@ -144,18 +146,23 @@ textarea {
   justify-content: space-between;
 }
 
-.last {
+.name {
+  width: 50%;
   margin-right: 10px;
 }
 
-.name {
-  width: 50%;
+.name:last-child {
+  margin-right: 0;
 }
 
 /*性別*/
 
 .gender__column {
   margin-right: 10px;
+}
+
+.gender__column:last-child {
+  margin-right: 0;
 }
 
 input[type="radio"] {
@@ -191,7 +198,7 @@ input[type="radio"]:checked + .radio__span::after {
 
 /*出身*/
 
-.origin__input {
+.origin__parent {
   width: 50%;
   position: relative;
 }
@@ -201,11 +208,11 @@ input[type="radio"]:checked + .radio__span::after {
 	appearance: none;
 }
 
-.origin__input:after {
+.origin__parent:after {
   content: '';
   position: absolute;
   right: 15px;
-  top: 60%;
+  top: 40%;
   transform: rotate(45deg);
   height: 5px;
   width: 5px;
@@ -222,8 +229,18 @@ input[type="radio"]:checked + .radio__span::after {
 /*希望コース*/
 
 /*チェックボックス一度消す*/
-input[type="checkbox"] {
+
+.couse__check {
   display: block;
+  margin-bottom: 10px;
+}
+
+.couse__check:last-child {
+  margin-bottom: 0;
+}
+
+input[type="checkbox"] {
+  display: none;
   position: relative;
   opacity:0;
   -webkit-appearance: none;
@@ -269,6 +286,7 @@ input[type="checkbox"]:checked + .cause__span::after{
 .accont {
   background-color:#01bfbd;
   color: #fff;
+  cursor: pointer;
   height: 50px;
 }
 
@@ -309,3 +327,22 @@ input[type="checkbox"]:checked + .cause__span::after{
 .linkto:hover {
   color: #39dddd;
 }
+
+/*
+一回目　指摘点
+
+・ポインター修正　facebook google ○
+
+・boder radious共通化face google ○
+
+・border shadow inner　○
+
+・名前　name margin属性　ラストチャイルドで指定 ○
+
+・性別　その他　マージンライト必要なし　lastchild ○
+
+・出身　セレクト基準で指定　タグ一つ追加必要(セレクトを囲う) ○
+
+・希望コース　チェックボックスdisplay noneで消す　○
+
+*/
